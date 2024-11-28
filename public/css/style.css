@@ -1,0 +1,1179 @@
+:root {
+  --color-bg-inicio: #6B8E23;
+  --color-bg-inicio-hover: #556B2F;
+  --color-bg-ventas: #d1a30d;
+  --color-bg-ventas-hover: #d1a35d;
+  --color-bg-usuarios: #031A58;
+  --color-bg-usuarios-hover: #0a2066;
+  --color-bg-proveedores: #9370DB;
+  --color-bg-proveedores-hover: #7B68EE;
+  --color-bg-productos: #CD5C5C;
+  --color-bg-productos-hover: #B22222;
+  --color-bg-categorias: #66B2B2;
+  --color-bg-categorias-hover: #4F9494;
+  --color-bg-reportes: #FF9800;
+  --color-bg-reportes-hover: #FF9860;
+  --color-bg-notas: #3399FF;
+  --color-bg-notas-hover: #3399d0;
+  --color-bg-backup: #FF6600;
+  --color-bg-backup-hover: #e96812;
+  --color-bg-salir: #DC3545;
+  --color-bg-salir-hover: #C82333;
+  --color-navbar-bg: #031A58;
+  --color-table-bg: #ffffff;
+  --color-table-header-bg: #031A58;
+  --color-alert-bg: #FFFAF0;
+  --color-alert-border: #FFA500;
+  --color-alert-text: #8B0000;
+  --color-alert-icon: #FF4500;
+
+  --primary-color: #0066cc;
+  --secondary-color: #f0f0f0;
+  --hover-color: #e0e0e0;
+  --text-color: #333;
+  --link-color: #0066cc;
+
+}
+
+#dataRoot{
+  margin-left: 0%;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+
+}  
+
+.Panel{
+  text-align: center;
+  font-size:30px; 
+}
+
+.container-fluid{
+  
+  padding:0px;
+  
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  padding: 10px;
+}
+
+/* Añade un margen superior al contenido principal para evitar que quede oculto detrás del navbar */
+body {
+  padding-top: 56px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+/* Asegúrate de que el contenedor del navbar ocupe todo el ancho */
+#navbar .container-fluid {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.card-principal{
+
+  padding-top: 50px;
+
+  margin: 10px;
+}
+  /*login */
+
+.logo{
+  margin-left: 0;
+  padding-left: 0;
+  height: 100vh;
+  /* background-color: black; */
+}
+
+
+/* navbar */
+.navbar {
+  transition: background-color 0.5s ease;
+}
+/* fin navbar */
+
+/* diseño menu */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-table-bg);
+  padding: 1rem;
+}
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+}
+.btn-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  color: var(--color-alert-bg);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-menu i {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+.btn-inicio { background-color: var(--color-bg-inicio); }
+.btn-inicio:hover { background-color: var(--color-bg-inicio-hover); }
+.btn-ventas { background-color: var(--color-bg-ventas); }
+.btn-ventas:hover { background-color: var(--color-bg-ventas-hover); }
+.btn-usuarios { background-color: var(--color-bg-usuarios); }
+.btn-usuarios:hover { background-color: var(--color-bg-usuarios-hover); }
+.btn-proveedores { background-color: var(--color-bg-proveedores); }
+.btn-proveedores:hover { background-color: var(--color-bg-proveedores-hover); }
+.btn-productos { background-color: var(--color-bg-productos); }
+.btn-productos:hover { background-color: var(--color-bg-productos-hover); }
+.btn-categorias { background-color: var(--color-bg-categorias); }
+.btn-categorias:hover { background-color: var(--color-bg-categorias-hover); }
+.btn-reportes{background-color: var(--color-bg-reportes); }
+.btn-reportes:hover{background-color: var(--color-bg-reportes-hover);}
+.btn-notas{background-color: var(--color-bg-notas); }
+.btn-notas:hover{background-color: var(--color-bg-notas-hover);}
+.btn-backup{background-color: var(--color-bg-backup); }
+.btn-backup:hover{background-color: var(--color-bg-backup-hover);}
+.btn-salir { background-color: var(--color-bg-salir); }
+.btn-salir:hover { background-color: var(--color-bg-salir-hover); }
+
+@media (min-width: 768px) {
+  .menu {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .btn-menu {
+      font-size: 1.5rem;
+      padding: 1.5rem;
+  }
+  .btn-menu i {
+      font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+      grid-template-columns: repeat(3, 1fr);
+  }
+  .btn-menu {
+      font-size: 1.8rem;
+      padding: 2rem;
+  }
+  .btn-menu i {
+      font-size: 4rem;
+      margin-top: 1rem;
+  }
+}
+
+  /* terminan los botones de menu princpal */
+
+
+/* Inicia panel de usario */
+
+
+  /* Estilos generales */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .PanelUsu{
+    color: var(--color-bg-usuarios);
+  }
+
+  /* Inicio Alerta Stock Minimo */
+
+  .alerta-stockMinimo {
+    background-color: #FFFAF0; /* Fondo crema claro para mejor contraste */
+    border: 3px solid #FFA500; /* Borde naranja más visible */
+    color: #000000; /* Texto negro para máximo contraste */
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 20px; /* Tamaño de fuente base más grande */
+    line-height: 1.8; /* Mayor espaciado entre líneas */
+    max-width: 800px; /* Limita el ancho para mejorar la legibilidad */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alerta-stockMinimo b {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 24px; /* Título aún más grande */
+    color: #8B0000; /* Rojo oscuro para el título */
+}
+
+.alerta-stockMinimo::before {
+    content: "\26A0"; /* Código Unicode para el símbolo de advertencia */
+    font-size: 30px;
+    margin-right: 15px;
+    vertical-align: middle;
+    color: #FF4500; /* Naranja rojizo para el ícono */
+}
+
+/* Mejora la legibilidad en pantallas pequeñas */
+@media (max-width: 768px) {
+    .alerta-stockMinimo {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .alerta-stockMinimo b {
+        font-size: 22px;
+    }
+}
+
+/* Asegura que el texto no sea demasiado pequeño en ningún dispositivo */
+@media (max-width: 480px) {
+    .alerta-stockMinimo {
+        font-size: 16px;
+    }
+
+    .alerta-stockMinimo b {
+        font-size: 20px;
+    }
+}
+
+
+.notification-badge {
+            position: absolute;
+            /* top: -5px; */
+            /* right: 30px; */
+            padding: 3px 5px;
+            border-radius: 50%;
+            background: red;
+            color: white;
+            font-size: 0.6em;
+        }
+
+        #notificationBtn {
+          font-size: 1.2em;
+          padding: 10px 15px;
+      }
+
+  /* Modal Stock Minimo */
+
+  .modal-dialog {
+    max-width: 90%;
+    margin: 1.75rem auto;
+}
+.modal-content {
+    background-color: #FFF5E6;
+    border-radius: 15px;
+}
+.modal-header {
+    background-color: #FFB347;
+    color: #333;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px;
+}
+.modal-title {
+    font-size: 2em;
+    font-weight: bold;
+}
+.modal-body {
+    font-size: 1.2em;
+    padding: 30px;
+}
+.list-group-item {
+    background-color: #FFF5E6;
+    border-color: #FFB347;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.btn-close {
+    font-size: 1.5em;
+}
+.modal-footer .btn {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+  /* Fin Alerta Stock Minimo */
+
+  /* Contenedor principal */
+  .table-responsive {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Botón de nuevo usuario */
+  #BtnNewUser {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 24px;
+    color: white;
+    background-color: var(--color-bg-usuarios);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  #BtnNewUser:hover {
+    transform: scale(1.05);
+  }
+
+  #BtnNewUser i {
+    margin-right: 10px;
+  }
+
+  /* Tabla de usuarios */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .table th,
+  .table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table th {
+    background-color: var(--color-bg-usuarios);
+    color: white;
+    font-size: 22px;
+  }
+
+  .table td {
+    font-size: 25px;
+  }
+
+  /* Estilos para los botones de acción */
+  .btn-PanelUsuarios {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: var(--color-bg-usuarios);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .btn:hover {
+    transform: scale(1.05);
+  }
+
+  .btn i {
+    margin-right: 5px;
+  }
+
+  .BtnUpdateUser {
+    background-color: #4CAF50 !important; /* Verde para editar */
+  }
+
+  .BtnDeleteUser {
+    background-color: #f44336 !important; /* Rojo para eliminar */
+  }
+
+  .btn[style*="cursor: not-allowed"] {
+    background-color: #cccccc !important;
+    cursor: not-allowed !important;
+  }
+
+  /* Estilos para los estados de usuario */
+  td b[style*="color:green"] {
+    border-radius: 10px;
+    /* background-color: #e6ffe6; */
+    color: green !important;
+    font-weight: bold;
+  }
+
+  td b[style*="color:red"] {
+    color: red !important;
+    font-weight: bold;
+  }
+
+  /* Mensaje de alerta */
+  .alert-danger {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Mejoras de accesibilidad */
+  @media (max-width: 768px) {
+    .table th,
+    .table td {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    #BtnNewUser,
+    .btn {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+  }
+
+  /* Enfoque para elementos interactivos */
+  #BtnNewUser:focus,
+  .btn:focus {
+    outline: 3px solid #4CAF50;
+    outline-offset: 2px;
+  }
+
+/* termina panel de usuario */
+
+/* Inicio Proveedores */
+/* Estilos para el panel de proveedores */
+
+.PanelProve{
+  color: var(--color-bg-proveedores);
+}
+#DataPanelProveedores {
+  width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* #DataPanelProveedores p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #031A58;
+  margin-bottom: 20px;
+} */
+
+/* Estilos para los botones */
+#BtnNewProv, #Reload {
+  display: inline-block;
+    padding: 15px 30px;
+    font-size: 28px;
+    color: white;
+    background-color: var(--color-bg-proveedores);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#BtnNewProv:hover, #Reload:hover {
+  background-color: var(--color-bg-proveedores);
+}
+
+#Reload {
+  float: right;
+}
+
+/* Estilos para la tabla */
+#DataPanelProveedores table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+#DataPanelProveedores th, 
+#DataPanelProveedores td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#DataPanelProveedores th {
+  background-color: var(--color-bg-proveedores);
+  color: #fff;
+  font-size: 24px;
+}
+
+#DataPanelProveedores td {
+  background-color: #fff;
+  font-size: 20px;
+}
+
+/* Estilos para mejorar el contraste del estado */
+#DataPanelProveedores td b {
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#DataPanelProveedores td b[style*="color:green"] {
+  /* background-color: #e6ffe6; */
+  color: #006600;
+}
+
+#DataPanelProveedores td b[style*="color:red"] {
+  background-color: #ffe6e6;
+  color: #cc0000;
+}
+
+/* Estilos para los botones de acción */
+#DataPanelProveedores .btn {
+  font-size: 24px;
+  padding: 8px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-bg-proveedores);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#DataPanelProveedores .btn:hover {
+  background-color: var(--color-bg-proveedores);
+}
+
+#DataPanelProveedores .btn[style*="cursor: not-allowed"] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Estilos para el mensaje de alerta */
+#DataPanelProveedores .alert {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#DataPanelProveedores .alert-danger {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #cc0000;
+}
+
+/* Termina Prooveedores */
+
+/* Inicio Productos  */
+.PanelProduc{
+  color: var(--color-bg-productos);
+}
+
+
+#DataPanelProductos {
+  width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* #DataPanelProductos p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #031A58;
+  margin-bottom: 20px;
+} */
+
+/* Estilos para los botones */
+#BtnNewProd, #Reload {
+  display: inline-block;
+    padding: 15px 30px;
+    font-size: 28px;
+    color: white;
+    background-color: var(--color-bg-productos);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#BtnNewProd:hover, #Reload:hover {
+  background-color: var(--color-bg-productos);
+}
+
+#Reload {
+  float: right;
+}
+
+/* Estilos para la tabla */
+#DataPanelProductos table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+#DataPanelProductos th, 
+#DataPanelProductos td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#DataPanelProductos th {
+  background-color: var(--color-bg-productos);
+  color: #fff;
+  font-size: 24px;
+}
+
+#DataPanelProductos td {
+  background-color: #fff;
+  font-size: 20px;
+}
+
+/* Estilos para mejorar el contraste del estado */
+#DataPanelProductos td b {
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#DataPanelProductos td b[style*="color:green"] {
+  /* background-color: #e6ffe6; */
+  color: #006600;
+}
+
+#DataPanelProductos td b[style*="color:red"] {
+  background-color: #ffe6e6;
+  color: #cc0000;
+}
+
+/* Estilos para los botones de acción */
+#DataPanelProductos .btn {
+  font-size: 24px;
+  padding: 8px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  background-color: #CD5C5C;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#DataPanelProductos .btn:hover {
+  background-color: var(--color-bg-productos);
+}
+
+#DataPanelProductos .btn[style*="cursor: not-allowed"] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+/* Estilos para el mensaje de alerta */
+#DataPanelProductos .alert {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#DataPanelProductos .alert-danger {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #cc0000;
+}
+/* Fin Productos */
+
+/* Incio Categorias */
+
+
+.PanelCate{
+  color: var(--color-bg-categorias);
+}
+
+
+#DataPanelCategorias {
+  width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* #DataPanelCategorias p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #031A58;
+  margin-bottom: 20px;
+} */
+
+/* Estilos para los botones */
+#BtnNewCate, #Reload {
+  display: inline-block;
+    padding: 15px 30px;
+    font-size: 28px;
+    color: white;
+    background-color: var(--color-bg-categorias);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#BtnNewCate:hover, #Reload:hover {
+  background-color: var(--color-bg-categorias-hover);
+}
+
+#Reload {
+  float: right;
+}
+
+/* Estilos para la tabla */
+#DataPanelCategorias table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+#DataPanelCategorias th, 
+#DataPanelCategorias td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#DataPanelCategorias th {
+  background-color: var(--color-bg-categorias);
+  color: #fff;
+  font-size: 24px;
+}
+
+#DataPanelCategorias td {
+  background-color: #fff;
+  font-size: 20px;
+}
+
+/* Estilos para mejorar el contraste del estado */
+#DataPanelCategorias td b {
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#DataPanelCategorias td b[style*="color:green"] {
+  /* background-color: #e6ffe6; */
+  color: #006600;
+}
+
+#DataPanelCategorias td b[style*="color:red"] {
+  background-color: #ffe6e6;
+  color: #cc0000;
+}
+
+/* Estilos para los botones de acción */
+#DataPanelCategorias .btn {
+  font-size: 24px;
+  padding: 8px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-bg-categorias);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#DataPanelCategorias .btn:hover {
+  background-color: var(--color-bg-categorias-hover);
+}
+
+#DataPanelCategorias .btn[style*="cursor: not-allowed"] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+/* Estilos para el mensaje de alerta */
+#DataPanelCategorias .alert {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#DataPanelCategorias .alert-danger {
+  background-color: #ffe6e6;
+  color: #cc0000;
+  border: 1px solid #cc0000;
+}
+
+/* Fin Categorias */
+
+/* Inicio Ventas */
+
+.PanelVentas{
+  color: var(--color-bg-ventas);
+}
+
+.tablaPreVenta{
+  margin: 0 auto;
+  width: 100%
+  
+}
+.thVentas{
+  vertical-align: middle;
+  text-align: center;
+  background-color: var(--color-bg-ventas) !important;
+  
+}
+
+.BtnDelProductoCarrito{
+  background-color: var(--color-bg-salir);
+}
+
+
+/* Fin Ventas */
+
+
+/* Incio Notas */
+
+.PanelNotas{
+  color: var(--color-bg-notas);
+}
+
+/* Fin Notas */
+
+/* Inicio Notas Rapidad */
+#note-form {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#note-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 24px;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  min-height: 150px;
+  resize: vertical;
+}
+.btn {
+  padding: 15px 30px;
+  font-size: 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-primary {
+  background-color: #4CAF50;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #45a049;
+}
+.note-item {
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.note-actions {
+  margin-top: 15px;
+}
+.btn-edit {
+  font-size: 20px !important;
+  background-color: #2196F3 !important;
+  color: white !important;
+}
+.btn-edit:hover {
+  background-color: #1976D2;
+}
+.btn-delete {
+  font-size: 20px !important;
+  background-color: #f44336 !important;
+  color: white !important;
+}
+.btn-delete:hover {
+  background-color: #d32f2f;
+}
+
+#save-button {
+  display: block;             /* Asegura que ocupe una nueva línea */
+  width: 100%;               /* 100% del ancho del viewport */
+  height: 50px;               /* Altura fija (puedes ajustarla) */
+  padding: 10px;              /* Espaciado interno */
+  font-size: 1.2rem;          /* Tamaño de fuente relativo */
+  text-align: center;         /* Centra el texto */
+  background-color: #43a9b0;  /* Color de fondo */
+  color: white;               /* Color del texto */
+  border: none;               /* Sin borde */
+  cursor: pointer;            /* Muestra un cursor de mano al pasar sobre el botón */
+  transition: background-color 0.3s ease;  /* Animación suave en el fondo */
+  border-radius: 10px;
+}
+
+/* Estilos responsive para dispositivos más pequeños */
+@media (max-width: 600px) {
+  #save-button {
+      font-size: 1rem;       /* Reduce el tamaño del texto en pantallas pequeñas */
+      height: 45px;          /* Ajusta la altura */
+  }
+}
+
+#save-button:hover {
+  background-color: #36969e; /* Color de fondo al pasar el cursor */
+}
+
+
+
+/* Fin Notas Rapidas */
+
+/* modal de informacion */
+
+
+/* Estilos para el modal de información */
+/* Estilos accesibles para personas de la tercera edad */
+.modal-info-accessible {
+  background-color: #f9f9f9; /* Color de fondo suave */
+  border: 2px solid #004085; /* Borde con color contrastante */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.modal-title-accessible {
+  font-size: 1.5rem; /* Aumentar el tamaño de la fuente */
+  color: #004085; /* Color de texto con alto contraste */
+}
+
+.modal-body-accessible {
+  font-size: 1.2rem; /* Aumentar el tamaño de la fuente */
+  line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+  color: #333; /* Color de texto oscuro para mayor legibilidad */
+}
+
+.btn-close-accessible {
+  background-color: #ffffff; /* Fondo blanco para el botón de cerrar */
+  color: #004085; /* Color de texto contrastante */
+  font-size: 1.2rem; /* Aumentar el tamaño de la fuente del botón */
+}
+
+.btn-close-accessible:hover {
+  background-color: #e0e0e0; /* Color de fondo al pasar el ratón */
+}
+.success-gif {
+  width: 100px; /* Ajusta el tamaño del GIF según sea necesario */
+  height: auto; /* Mantener la relación de aspecto */
+  margin-bottom: 10px; /* Espacio inferior */
+  display: block; /* Hacer que el GIF sea un bloque */
+  margin-left: auto; /* Centrar el GIF horizontalmente */
+  margin-right: auto; /* Centrar el GIF horizontalmente */
+}
+
+
+/* fin modal de informacion */
+
+/* Busqueda Cliente */
+#sugerencias {
+  position: absolute;
+  z-index: 1000;
+  width: calc(100% - 1rem);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  max-height: 200px; /* Ajustar según sea necesario */
+  overflow-y: auto;
+}
+
+
+/* Fin Busqueda Cliente */
+
+/* Inicio BackUp */
+.backup-info {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.backup-info strong {
+  margin-right: 10px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.button {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #0056b3;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  min-height: 100px;
+}
+
+/* Estilo para el hover y focus solo en los botones 2 y 3 */
+.button-container .button-2:hover, 
+.button-container .button-3:hover, 
+.button-container .button-2:focus, 
+.button-container .button-3:focus {
+  background-color: var(--color-bg-backup-hover);
+  outline: 3px solid #ffff00;
+  color: var(--color-alert-bg);
+}
+
+.button-container .button-1:hover{
+  background-color: var(--color-bg-inicio-hover);
+  outline: 3px solid #ffff00;
+  color: var(--color-alert-bg);
+}
+
+/* Focus general para todos los botones */
+.button:focus {
+  outline: 5px solid #ffff00;
+}
+
+/* Colores de fondo para los botones */
+.button-1 { background-color: var(--color-bg-inicio); }
+.button-2 { background-color: var(--color-bg-backup); }
+.button-3 { background-color: var(--color-bg-backup); }
+
+
+@media (min-width: 768px) {
+  .button-container {
+      flex-direction: row;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+      transition: none;
+  }
+}
+
+/* Fin BackUp */
+
+
+/* Ayuda */
+
+.video-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.video-list > li {
+  margin-bottom: 10px;
+}
+
+.category {
+  font-size: 25px;
+  background-color: var(--secondary-color);
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.category:hover {
+  background-color: var(--hover-color);
+}
+
+.video-links {
+  display: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.video-links li {
+  margin: 10px 0;
+}
+
+.video-links a {
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--link-color);
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.video-links a:hover {
+  background-color: var(--link-color);
+  color: white;
+}
+
+.category::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.category.active::before {
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+      padding: 10px;
+  }
+
+  .category {
+      padding: 12px;
+  }
+
+  .video-links {
+      padding-left: 15px;
+  }
+}
